@@ -2,13 +2,14 @@ from random import random
 from random import randrange
 from typing import Callable
 from typing import List
+from statistics import median
 
-from chromosomes import get_chromosome_length
-from chromosomes import Allele
-from chromosomes import Chromosome
-from individuals import Individual
-from populations import Population
-from populations import create_population
+from .chromosomes import get_chromosome_length
+from .chromosomes import Allele
+from .chromosomes import Chromosome
+from .individuals import Individual
+from .populations import Population
+from .populations import create_population
 
 def flip(probability: float) -> float:
     return random() < probability
@@ -33,7 +34,6 @@ class GeneticAlgorithm:
             fitsum = fitsum + ind.fitness
             if ind.fitness < minfit:
                 minfit = ind.fitness
-        minfit = max(minfit, 0.0)
         cutsum = fitsum - minfit * self.population_size
         return [cutsum, minfit]
 

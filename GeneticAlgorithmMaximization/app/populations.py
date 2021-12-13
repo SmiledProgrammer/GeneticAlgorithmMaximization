@@ -1,7 +1,7 @@
 from typing import List
 from typing import Callable
 
-from individuals import Individual
+from .individuals import Individual
 
 MAX_POPULATION_SIZE = 100
 
@@ -11,8 +11,8 @@ class Population:
         
     def __repr__(self):
         s = '{\n'
-        for ind in self.individuals:
-            s = s + '[{}]\n'.format(ind)
+        for i, ind in enumerate(self.individuals):
+            s = s + '{}: [{}]\n'.format(i, ind)
         s = s + '}'
         return s
 

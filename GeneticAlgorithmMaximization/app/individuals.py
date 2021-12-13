@@ -1,15 +1,14 @@
 from typing import Callable
 
-from chromosomes import Chromosome
-from chromosomes import value_to_chromosome
-from chromosomes import chromosome_to_value
+from .chromosomes import Chromosome
+from .chromosomes import value_to_chromosome
+from .chromosomes import chromosome_to_value
 
 class Individual:
     def __init__(self, chromosome: Chromosome, x: float, fitness_func: Callable):
         self.chromosome = value_to_chromosome(x)
         self.x = x
         self.fitness = fitness_func(self.x)
-        #self.fitness = max(0.0, fitness_func(self.x))
         
     def __repr__(self):
         return '({}, {:.2f}, {:.2f})'.format(self.chromosome, self.x, self.fitness)

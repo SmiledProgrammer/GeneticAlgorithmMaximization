@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>9d5455ca-a75b-4d56-b706-ccdb154c4716</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>src\GeneticAlgorithmMaximization.py</StartupFile>
+    <StartupFile>GeneticAlgorithmMaximization.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,31 +27,34 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="src\application.py">
+    <Compile Include="app\application.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\chromosomes.py">
+    <Compile Include="app\chromosomes.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\config.py">
+    <Compile Include="app\__init__.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\GeneticAlgorithmMaximization.py" />
-    <Compile Include="src\genetic_algorithm.py">
+    <Compile Include="config.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\individuals.py">
+    <Compile Include="GeneticAlgorithmMaximization.py" />
+    <Compile Include="app\genetic_algorithm.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\plots.py">
+    <Compile Include="app\individuals.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\populations.py">
+    <Compile Include="app\plots.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\populations.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\" />
+    <Folder Include="app\" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.7" />
