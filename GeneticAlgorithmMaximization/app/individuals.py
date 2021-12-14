@@ -8,7 +8,7 @@ class Individual:
     def __init__(self, chromosome: Chromosome, x: float, fitness_func: Callable):
         self.chromosome = value_to_chromosome(x)
         self.x = x
-        self.fitness = fitness_func(self.x)
+        self.fitness = max(0.0, fitness_func(self.x))
         
     def __repr__(self):
         return '({}, {:.2f}, {:.2f})'.format(self.chromosome, self.x, self.fitness)

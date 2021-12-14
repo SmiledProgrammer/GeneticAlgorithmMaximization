@@ -11,8 +11,8 @@ from .plots import display_fitness_plots
 def run(fitness_function: Callable, initial_population: List[float], crossover_probability: float, mutation_probability: float, max_generations: int):
     print('Starting the optimization...')
 
-    chrlen = 15
-    chrprec = 10**3
+    chrlen = 5
+    chrprec = 1
     chroffset = 14.0
     setup_chromosomes(chrlen, chrprec, chroffset)
 
